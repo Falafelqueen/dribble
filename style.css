@@ -1,0 +1,114 @@
+/*  https: //source.unsplash.com/random */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;700");
+@import url("https://use.fontawesome.com/releases/v6.1.2/css/all.css");
+
+:root {
+  /* Colors */
+  --clr-accent-green: rgb(54, 176, 80);
+  --clr-dark-grey: rgb(148, 148, 148);
+  --clr-accent-orange: rgb(249, 180, 26);
+  --clr-white: rgb(255, 255, 255);
+}
+
+/* Reset */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block
+}
+
+
+body {
+  min-height: 100vh;
+  background-image: url("https://source.unsplash.com/random");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-flow {
+  display: grid;
+  align-content: start;
+  row-gap: 1.25rem;
+}
+
+.card {
+  width: 50%;
+  min-height: 500px;
+  margin: auto;
+  padding: 1.75rem 1rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: var(--clr-white);
+  color: var(--clr-dark-grey)
+}
+
+.card__top {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 80%;
+  gap: 1.25rem;
+
+  overflow: hidden;
+}
+
+.card__top__image {
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__top__icon {
+  font-size: larger;
+  color: pink;
+}
+
+.card__top__rating > span {
+  font-size: larger;
+  color: var(--clr-accent-orange);
+}
+
+.card__center {
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__bottom.flex-inline {
+  gap: 1rem;
+}
+
+.card__bottom > *:hover{
+  border: 1px solid var(--clr-accent-orange)
+}
+
+.card__bottom__item {
+  flex: 1;
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  border: none;
+  background-color: var(--clr-accent-green);
+  color: var(--clr-white)
+}
+
+.btn-large {
+  width: 100%;
+  padding-block: 1rem;
+}
+
+.btn-circle {
+  border-radius: 100%;
+}
